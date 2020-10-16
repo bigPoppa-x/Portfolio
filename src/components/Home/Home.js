@@ -1,30 +1,24 @@
 import React from "react";
 import Github from "../../assets/github-brands.svg";
-import "./Home.css";
+import "./Home.scss";
 
 
 const Home = () => {
   return (
-    <div className="home-container">
-      <div className="home-logos">
-        <img src={require("../../assets/linkedin.png")}/>
-        <img src={require("../../assets/instagram.png")} />
-        <img src={require("../../assets/Gmail.svg")} />
-        <img src={require("../../assets/github-brands.svg")} className="white"/>
-        
-        {/* <i className="fab fa-github"></i> */}
-      </div>
-      <div className="home-spacer"></div>
-      <div className="txt">
-        <h1>Ante Petković</h1>
-        <h3>Web Developer</h3>
-        <div className="home-view-more">
-          See more about me{" "}
-          <span>
-            <img src={require("../../assets/ArrowDown.png")} id="arrow" />
-          </span>
+    <div className="box-container">
+      <div className="box">
+        <div className="box__top">
+          <div className="box__top--left">web</div>
+          <div className="box__top--right">dev</div>
         </div>
-      </div>
+        <div className="box__right">
+          <div className="box__right--up">github</div>
+          <div className="box__right--down">email</div>
+        </div>
+        <div className="box__bottom">see more about me</div>
+        <div className="box__left">made by</div>
+        <div>ante petkovic</div>
+      </div>      
     </div>
   );
 };

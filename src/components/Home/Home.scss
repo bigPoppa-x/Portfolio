@@ -1,0 +1,95 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.box-container {
+  display: flex;
+  height: calc(100vh - 65px);
+  /* height: calc(100vh - 5px); */
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  background-color: rgb(46, 44, 44);
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  border: 1.5px solid grey;
+
+  [class*="--"] {
+    border-style: solid;
+    border-color: grey;
+  }
+
+  &__top {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 50%;
+    top: -50%;
+    background-color: grey;
+
+    &--left {
+      width: 50%;
+      border-width: 2px 1px .5px 2px;
+      border-style: solid;
+    border-color: grey;
+    }
+
+    &--right {
+      width: 50%;
+      border-width: 2px 2px .5px 1px;
+      border-style: solid;
+    border-color: grey;
+    }
+  }
+
+  &__right {
+    display: flex;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 100%;
+    flex-direction: column;
+
+    &--up {
+      height: 50%;
+      width: 100%;
+      border-width: 2px 2px 1px .5px;
+      border-style: solid;
+    border-color: grey;
+    }
+
+    &--down {
+      height: 50%;
+      width: 100%;
+      border-width: 1px 2px 2px .5px;
+      border-style: solid;
+    border-color: grey;
+    }
+  }
+
+  &__bottom {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-width: .5px 2px 2px 2px;
+    border-style: solid;
+    border-color: grey;
+  }
+
+  &__left {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: -50%;
+    border-width: 2px .5px 2px 2px;
+    border-style: solid;
+    border-color: grey;
+  }
+}
